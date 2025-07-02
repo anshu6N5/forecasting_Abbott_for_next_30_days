@@ -37,8 +37,8 @@ last_day <- tail(index(prices), 1)
 future_df30 <- data.frame(
   date = seq(from = last_day + 1, by = "days", length.out = 30),
   mean = as.numeric(future$mean),
-  lower = as.numeric(future$lower),
-  upper = as.numeric(future$upper)
+  lower = as.numeric(future$lower[,2]),
+  upper = as.numeric(future$upper[,2])
 )
 
 
